@@ -61,7 +61,7 @@ const SEOHead = ({
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "DevFreelance.pro",
+      "name": "Serge AHOUANSINOU - DevFreelance.pro",
       "jobTitle": "Développeur d'Applications Numériques Freelance",
       "description": description,
       "url": url,

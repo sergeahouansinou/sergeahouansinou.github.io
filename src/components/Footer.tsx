@@ -9,7 +9,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-primary">DevFreelance.pro</h3>
+            <h3 className="text-lg font-semibold text-primary">Serge AHOUANSINOU</h3>
+            <p className="text-xs text-muted-foreground mb-1">DevFreelance.pro</p>
             <p className="text-sm text-muted-foreground">
               Développeur freelance spécialisé dans la création d'applications web et mobile sur mesure.
               Laravel, Flutter, React - Solutions digitales innovantes pour votre entreprise.
@@ -63,8 +64,8 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} DevFreelance.pro - Développeur d'applications numériques freelance. 
-            Tous droits réservés. | <Link to="/legal" className="hover:text-primary transition-colors">Mentions légales</Link>
+            © {currentYear} Serge AHOUANSINOU - DevFreelance.pro - Développeur d'applications numériques freelance. 
+            Tous droits réservés. | <Link to="/legal" className="hover:text-primary transition-colors">Mentions légales</Link> | <Link to="/privacy" className="hover:text-primary transition-colors">Politique de confidentialité</Link>
           </p>
         </div>
       </div>
