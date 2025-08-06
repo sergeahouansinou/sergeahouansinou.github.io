@@ -3,83 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Star, Quote, ArrowRight, Building, User } from "lucide-react";
+import testimonialsData from "@/data/testimonials.json";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Marie Dubois",
-      position: "Directrice Marketing",
-      company: "TechStart Solutions",
-      industry: "Start-up",
-      rating: 5,
-      text: "Collaboration exceptionnelle ! L'application mobile développée par DevFreelance.pro a dépassé nos attentes. Interface intuitive, performances excellentes et livraison dans les délais. Notre taux de conversion a augmenté de 35% en 6 mois.",
-      project: "Application mobile e-commerce",
-      results: ["35% conversion", "10K+ téléchargements", "4.8/5 étoiles stores"],
-      date: "Janvier 2024"
-    },
-    {
-      id: 2,
-      name: "Thomas Leroux",
-      position: "CEO",
-      company: "PME Industrie Plus",
-      industry: "PME",
-      rating: 5,
-      text: "Enfin un développeur qui comprend les enjeux business ! La plateforme SaaS créée nous a permis de digitaliser complètement notre processus de gestion. ROI de 250% dès la première année et gain de temps considérable pour nos équipes.",
-      project: "Plateforme SaaS de gestion",
-      results: ["ROI 250%", "40% gain temps", "500+ utilisateurs"],
-      date: "Novembre 2023"
-    },
-    {
-      id: 3,
-      name: "Sophie Martin",
-      position: "Fondatrice",
-      company: "Wellness App",
-      industry: "Bien-être",
-      rating: 5,
-      text: "Approche très professionnelle et écoute client remarquable. L'application de réservation a transformé notre activité. Nos clients adorent la simplicité d'utilisation et nous avons divisé par 2 les annulations de dernière minute.",
-      project: "Application de réservation wellness",
-      results: ["-60% annulations", "95% satisfaction", "3K réservations/mois"],
-      date: "Septembre 2023"
-    },
-    {
-      id: 4,
-      name: "Jean-Pierre Moreau",
-      position: "Directeur Technique",
-      company: "Formation Digital",
-      industry: "Éducation",
-      rating: 5,
-      text: "Code de qualité exceptionnelle et architecture robuste. La plateforme e-learning développée supporte parfaitement la charge de nos 1200+ étudiants. Documentation complète et formation de notre équipe très appréciée.",
-      project: "Plateforme e-learning interactive",
-      results: ["1200+ étudiants", "85% complétion", "4.9/5 satisfaction"],
-      date: "Août 2023"
-    },
-    {
-      id: 5,
-      name: "Amélie Rousseau",
-      position: "Product Manager",
-      company: "IoT Innovations",
-      industry: "IoT",
-      rating: 5,
-      text: "Maîtrise technique impressionnante sur des sujets complexes IoT. L'application domotique fonctionne parfaitement avec nos capteurs et offre une expérience utilisateur fluide. Temps de réponse excellent et fiabilité au rendez-vous.",
-      project: "Application IoT domotique",
-      results: ["99.8% disponibilité", "30% économies", "<100ms réponse"],
-      date: "Juin 2023"
-    },
-    {
-      id: 6,
-      name: "David Chen",
-      position: "Co-fondateur",
-      company: "MarketPlace B2B",
-      industry: "E-commerce B2B",
-      rating: 5,
-      text: "Développement de marketplace complexe mené avec brio. Algorithme de matching intelligent, gestion multi-vendors, facturation automatisée... Tout fonctionne parfaitement. 5M€ de transactions en 18 mois !",
-      project: "Marketplace B2B complexe",
-      results: ["5M€ transactions", "200+ entreprises", "92% satisfaction"],
-      date: "Mars 2022"
-    }
-  ];
-
   const stats = [
     { number: "98%", label: "Clients satisfaits" },
     { number: "100%", label: "Projets livrés à temps" },
@@ -146,7 +72,7 @@ const Testimonials = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {testimonials.map((testimonial) => (
+              {testimonialsData.map((testimonial) => (
                 <Card key={testimonial.id} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-8 space-y-6">
                     {/* Header */}

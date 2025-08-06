@@ -16,78 +16,15 @@ import {
   Zap,
   HeartHandshake
 } from "lucide-react";
+import servicesData from "@/data/services.json";
 
 const Services = () => {
-  const mainServices = [
-    {
-      icon: Globe,
-      title: "Développement Web",
-      subtitle: "Applications web modernes et performantes",
-      description: "Création d'applications web sur mesure avec Laravel, React, Next.js. Solutions responsive, sécurisées et optimisées pour le référencement naturel.",
-      features: [
-        "Applications web Laravel/PHP",
-        "Interfaces React/TypeScript",
-        "API REST et GraphQL",
-        "Optimisation SEO",
-        "Design responsive",
-        "Intégrations tierces"
-      ],
-      price: "À partir de 3 000€",
-      duration: "4-12 semaines",
-      keywords: "développement web Laravel, application web sur mesure, React TypeScript, API REST"
-    },
-    {
-      icon: Smartphone,
-      title: "Applications Mobile",
-      subtitle: "iOS et Android avec Flutter",
-      description: "Développement d'applications mobiles natives avec Flutter. Une seule base de code pour iOS et Android, performances natives garanties.",
-      features: [
-        "Applications Flutter/Dart",
-        "iOS et Android",
-        "Performances natives",
-        "Intégration API",
-        "Notifications push",
-        "Publication stores"
-      ],
-      price: "À partir de 5 000€",
-      duration: "6-16 semaines",
-      keywords: "application mobile Flutter, développement iOS Android, app native"
-    },
-    {
-      icon: Settings,
-      title: "Maintenance & Support",
-      subtitle: "Évolutivité et sécurité continue",
-      description: "Maintenance technique, mises à jour sécuritaires, optimisations de performance et support continu pour vos applications.",
-      features: [
-        "Mises à jour sécuritaires",
-        "Optimisations performance",
-        "Monitoring & alertes",
-        "Backup automatisé",
-        "Support technique",
-        "Évolutions fonctionnelles"
-      ],
-      price: "À partir de 300€/mois",
-      duration: "Contrat annuel",
-      keywords: "maintenance web, support technique, mise à jour sécurité, monitoring"
-    },
-    {
-      icon: Users,
-      title: "Conseil & Accompagnement",
-      subtitle: "Expertise technique et stratégique",
-      description: "Audit technique, conseil en architecture, formation d'équipes et accompagnement dans vos projets de transformation digitale.",
-      features: [
-        "Audit technique",
-        "Conseil architecture",
-        "Formation équipes",
-        "Code review",
-        "Stratégie technique",
-        "Accompagnement projet"
-      ],
-      price: "À partir de 800€/jour",
-      duration: "Mission ponctuelle",
-      keywords: "conseil développement, audit technique, formation développeur, code review"
-    }
-  ];
+  const iconMap = {
+    Globe,
+    Smartphone,
+    Settings,
+    Users
+  };
 
   const techStack = [
     {
@@ -160,12 +97,14 @@ const Services = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {mainServices.map((service, index) => (
+            {servicesData.map((service, index) => {
+              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+              return (
               <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-1">
                 <CardHeader className="pb-4">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <service.icon className="w-8 h-8 text-primary" />
+                      <IconComponent className="w-8 h-8 text-primary" />
                     </div>
                     <div>
                       <CardTitle className="text-2xl">{service.title}</CardTitle>
@@ -202,7 +141,7 @@ const Services = () => {
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            )})}
           </div>
         </div>
       </section>
