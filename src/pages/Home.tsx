@@ -13,11 +13,21 @@ import {
   CheckCircle,
   Code2,
   Rocket,
-  Shield
+  Shield,
+  Brain,
+  Sparkles,
+  Bot,
+  Network
 } from "lucide-react";
 
 const Home = () => {
   const services = [
+    {
+      icon: Brain,
+      title: "Intégration IA",
+      description: "Intégration d'IA et de Machine Learning dans vos applications. Chatbots, analyse prédictive, automatisation.",
+      keywords: "intelligence artificielle, machine learning, IA, chatbot"
+    },
     {
       icon: Globe,
       title: "Développement Web",
@@ -31,20 +41,19 @@ const Home = () => {
       keywords: "application mobile, Flutter, iOS, Android"
     },
     {
-      icon: Settings,
-      title: "Maintenance & Support",
-      description: "Maintenance technique, mises à jour sécuritaires et support continu pour vos applications.",
-      keywords: "maintenance web, support technique, mise à jour"
-    },
-    {
-      icon: Users,
-      title: "Conseil & Accompagnement",
-      description: "Audit technique, conseil en architecture et accompagnement dans vos projets digitaux.",
-      keywords: "conseil développement, audit technique, architecture"
+      icon: Bot,
+      title: "Automatisation Intelligente",
+      description: "Automatisation de processus métiers avec l'IA. Optimisation et gain de temps pour votre entreprise.",
+      keywords: "automatisation, IA, processus métier, optimisation"
     }
   ];
 
   const benefits = [
+    {
+      icon: Sparkles,
+      title: "Innovation IA",
+      description: "Intégration des dernières avancées en IA pour des applications intelligentes et innovantes."
+    },
     {
       icon: Rocket,
       title: "Livraison Rapide",
@@ -56,9 +65,9 @@ const Home = () => {
       description: "Respect des bonnes pratiques, tests automatisés et code maintenable."
     },
     {
-      icon: Code2,
-      title: "Technologies Modernes",
-      description: "Utilisation des dernières technologies web et mobile pour des performances optimales."
+      icon: Network,
+      title: "Solutions Full-Stack",
+      description: "Expertise complète du frontend au backend, incluant DevOps et cloud."
     }
   ];
 
@@ -71,29 +80,38 @@ const Home = () => {
 
   return (
     <Layout 
-      title="Développeur Freelance | Applications Web & Mobile | Laravel, Flutter, React"
-      description="Développeur freelance spécialisé en applications web et mobile. Laravel, Flutter, React. Devis gratuit pour votre projet sur mesure. PME, start-ups, indépendants."
-      keywords="développeur freelance, application mobile, développement web, Laravel, Flutter, React, application sur mesure, développeur indépendant"
+      title="Mobile Developer & Web Developer | Expert Freelance | iOS, Android, Web Apps"
+      description="Professional mobile developer and web developer. Expert in iOS, Android, and web applications. Custom mobile and web solutions with Flutter, React, Laravel."
+      keywords="mobile developer, web developer, mobile app developer, web application developer, freelance mobile developer, iOS developer, Android developer, Flutter developer, React developer, Laravel developer"
     >
       <Hero />
 
       {/* Services Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-neural relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-ai rounded-full blur-3xl animate-pulse-glow" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-ai rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
+              <Brain className="w-4 h-4 text-primary" />
+              <span className="text-sm font-semibold text-primary">Intelligence Artificielle & Développement</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Services de <span className="text-primary">Développement</span> sur Mesure
+              Services <span className="bg-gradient-ai bg-clip-text text-transparent">Intelligents</span> sur Mesure
             </h2>
             <p className="text-lg text-muted-foreground">
-              Solutions complètes pour transformer vos idées en applications performantes et évolutives
+              Solutions complètes alliant IA et développement pour des applications performantes et innovantes
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="group transition-all duration-300 hover:-translate-y-1 bg-card border-primary/20 hover:border-primary/40">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-all">
                     <service.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -125,17 +143,17 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Pourquoi Choisir un <span className="text-primary">Développeur Freelance</span> ?
+              Une Expertise <span className="bg-gradient-ai bg-clip-text text-transparent">IA & Full-Stack</span> Complète
             </h2>
             <p className="text-lg text-muted-foreground">
-              Flexibilité, expertise technique et relation directe pour des projets réussis
+              Passion pour l'innovation, expertise technique et engagement pour votre réussite
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+              <div key={index} className="text-center space-y-4 group">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all group-hover:scale-105">
                   <benefit.icon className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold">{benefit.title}</h3>
