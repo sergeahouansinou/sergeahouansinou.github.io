@@ -8,54 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 220 30% 8%;
+    --foreground: 210 40% 96%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 25% 10%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 200 80% 35%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 220 85% 50%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 260 50% 40%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 230 75% 45%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 60%;
 
-    --accent: 180 70% 35%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 215 80% 48%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 200 80% 35%;
+    --border: 220 20% 20%;
+    --input: 220 20% 18%;
+    --ring: 220 85% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* AI-themed colors and effects */
-    --ai-cyan: 180 70% 35%;
-    --ai-blue: 200 80% 35%;
-    --ai-purple: 260 50% 40%;
-    --ai-pink: 320 60% 45%;
+    /* Night blue themed colors */
+    --night-blue: 220 85% 50%;
+    --night-blue-dark: 220 75% 35%;
+    --night-blue-light: 215 80% 60%;
+    --sparkle: 200 90% 55%;
     
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(200 80% 35%), hsl(260 50% 40%));
-    --gradient-secondary: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%));
-    --gradient-ai: linear-gradient(135deg, hsl(180 70% 35%), hsl(200 80% 35%), hsl(260 50% 40%));
-    --gradient-neural: linear-gradient(90deg, hsl(180 70% 35% / 0.08), hsl(260 50% 40% / 0.08));
+    /* Flat gradients without shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 50%), hsl(230 75% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 30% 8%), hsl(220 25% 12%));
+    --gradient-ai: linear-gradient(135deg, hsl(220 85% 50%), hsl(215 80% 55%), hsl(230 75% 45%));
+    --gradient-neural: linear-gradient(90deg, hsl(220 85% 50% / 0.05), hsl(230 75% 45% / 0.05));
     
-    /* Glows and shadows */
-    --glow-primary: 0 0 30px hsl(200 80% 35% / 0.3);
-    --glow-cyan: 0 0 40px hsl(180 70% 35% / 0.4);
-    --glow-purple: 0 0 40px hsl(260 50% 40% / 0.4);
-    --shadow-card: 0 10px 40px -10px hsl(200 80% 35% / 0.15);
-    --shadow-neural: 0 0 60px hsl(180 70% 35% / 0.2);
+    /* Sparkle effects for flat design */
+    --sparkle-primary: hsl(220 85% 50%);
+    --sparkle-secondary: hsl(215 80% 55%);
+    --sparkle-accent: hsl(200 90% 55%);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 

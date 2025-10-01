@@ -80,9 +80,9 @@ const Home = () => {
 
   return (
     <Layout 
-      title="Développeur Freelance | Applications Web & Mobile | Laravel, Flutter, React"
-      description="Développeur freelance spécialisé en applications web et mobile. Laravel, Flutter, React. Devis gratuit pour votre projet sur mesure. PME, start-ups, indépendants."
-      keywords="développeur freelance, application mobile, développement web, Laravel, Flutter, React, application sur mesure, développeur indépendant"
+      title="Mobile Developer & Web Developer | Expert Freelance | iOS, Android, Web Apps"
+      description="Professional mobile developer and web developer. Expert in iOS, Android, and web applications. Custom mobile and web solutions with Flutter, React, Laravel."
+      keywords="mobile developer, web developer, mobile app developer, web application developer, freelance mobile developer, iOS developer, Android developer, Flutter developer, React developer, Laravel developer"
     >
       <Hero />
 
@@ -109,9 +109,9 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-neural transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm bg-card/80 border-primary/10 hover:border-primary/30">
+              <Card key={index} className="group transition-all duration-300 hover:-translate-y-1 bg-card border-primary/20 hover:border-primary/40">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-ai/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-ai/20 transition-all group-hover:shadow-glow animate-neural-pulse">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-all">
                     <service.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -153,7 +153,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center space-y-4 group">
-                <div className="w-20 h-20 bg-gradient-ai/10 rounded-full flex items-center justify-center mx-auto group-hover:shadow-glow transition-all group-hover:scale-110 animate-neural-pulse">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto transition-all group-hover:scale-105">
                   <benefit.icon className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold">{benefit.title}</h3>

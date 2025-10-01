@@ -10,9 +10,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "Développeur Freelance | Applications Web & Mobile Sur Mesure | Laravel, Flutter, React",
-  description = "Développeur freelance expert en création d'applications web et mobile. Laravel, Flutter, React. Devis gratuit pour votre projet sur mesure. PME, start-ups, indépendants.",
-  keywords = "développeur freelance, application mobile, développement web, Laravel, Flutter, React, application sur mesure, développeur indépendant, création app, développement sur-mesure",
+  title = "Mobile Developer & Web Developer | Expert Freelance | Laravel, Flutter, React",
+  description = "Professional mobile developer and web developer freelance. Expert in iOS, Android, and web applications. Laravel, Flutter, React. Custom solutions for businesses and startups.",
+  keywords = "mobile developer, web developer, mobile app developer, web application developer, freelance developer, iOS developer, Android developer, Flutter developer, React developer, Laravel developer, custom app development, application development",
   image = "/og-image.jpg",
   url = "https://devfreelance.pro",
   type = "website"
@@ -71,14 +71,19 @@ const SEOHead = ({
         "https://linkedin.com/in/devfreelance"
       ],
       "knowsAbout": [
-        "Développement Web",
-        "Applications Mobile",
+        "Mobile Development",
+        "Web Development",
+        "Mobile App Developer",
+        "Web Application Developer",
+        "iOS Development",
+        "Android Development",
         "Laravel",
         "Flutter",
         "React",
         "JavaScript",
         "TypeScript",
-        "Node.js"
+        "Node.js",
+        "Full Stack Development"
       ],
       "makesOffer": {
         "@type": "Offer",
